@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- pom.xml skrá til að þýða og keyra venjulegt java forrit í Maven -->
+<!-- Ebba Þóra Hvannberg, HBV201G Viðmótsforritun -->
+
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>is</groupId>
+    <artifactId>HalloHeimur</artifactId>
+    <version>1.0-SNAPSHOT</version>
+<!--
+Skilgreina hvaða útgáfunúmer er á Java SDK þýðandanum
+    -->
+    <properties>
+        <maven.compiler.release>25</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!--
+    Skilgreina hvernig java forritið er keyrt, exec, með maven
+    mvn exec:java
+    eða fara í Maven gluggann í IntelliJ
+    -->
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.1</version>
+                <configuration>
+                    <mainClass>is.Main</mainClass> <!-- nafnið á klasanum sem hefur main sem er keyrt -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
