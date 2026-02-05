@@ -23,6 +23,8 @@ public class AdalController {
      */
     public void initialize() {
         // Býr til dialog áður en gluggi þessa controller er sýndur
+        // controllerinn er búinn til í forriti, en yfirleitt er hann búinn til
+        // þegar .fxml skrá er lesin inn
         LeikmennDialogController d = new LeikmennDialogController();
         // birta dialog, ná í nöfn leikmanna og setja í tilviksbreytu
         Leikmenn leikmenn = d.getNofnLeikmanna();
